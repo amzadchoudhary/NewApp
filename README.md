@@ -1,61 +1,88 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+````bash
+# Laravel POC User Dashboard
 
-## About Laravel
+A proof-of-concept Laravel application demonstrating a user dashboard built with Tabler UI, role-based access, CSV export, birthday alerts, and API endpoints.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- 🧑‍🤝‍🧑 User listing with pagination, search, and modals for viewing/editing.
+- 🎂 Birthday alert system with toast notifications on the dashboard.
+- 💾 Export user list as CSV for easy data management.
+- 🔒 Role-based access control (Admin/User) to manage permissions.
+- 📧 Simulated birthday email logs for demonstration.
+- 🌗 Dark mode toggle using Tabler for user preference.
+- 🔌 REST API for user list, secured with Laravel Sanctum.
+- 📦 One-command setup script for quick deployment.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🛠 Tech Stack
 
-## Learning Laravel
+- Laravel 11.x (or 12.x if that's the version you are using)
+- MySQL
+- Tabler UI
+- Laravel Sanctum
+- PHP 8.2+ (Laravel 11 requires PHP >= 8.2)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## ✅ Prerequisites
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- PHP >= 8.2 (matching Laravel's requirement)
+- Composer
+- MySQL or MariaDB
+- Node.js & NPM (for frontend asset compilation)
+- Git
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## ⚙️ Setup Instructions
 
-### Premium Partners
+Clone the repository:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+```bash
+git clone [https://github.com/amzadchoudhary/NewApp.git](https://github.com/amzadchoudhary/NewApp.git)
+cd NewApp
+````
 
-## Contributing
+Run the setup command:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+php artisan app:setup
+```
 
-## Code of Conduct
+This command will guide you through:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+  * Setting up database credentials and creating the `.env` file.
+  * Running database migrations.
+  * Seeding the database with initial data.
+  * Creating your initial admin user.
+  * Generating the application key.
 
-## Security Vulnerabilities
+-----
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🔐 Admin Login
 
-## License
+After successful setup, use the admin credentials you created during the `php artisan app:setup` process to log in to the dashboard.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+-----
+
+## 🧪 Simulated Birthday Alert
+
+The application includes a simulated birthday alert system. On user birthdays, toast notifications will appear at the bottom of the dashboard (or as configured). Additionally, birthday "email" events are logged.
+
+-----
+
+## 📷 Screenshots
+
+**Dashboard**
+![image](https://github.com/user-attachments/assets/c2eedbbd-fef3-40f2-86a7-0f7c249b2bff)
+
+**User Datatable View**
+![image](https://github.com/user-attachments/assets/8b556439-a015-45a2-ba84-3f2f3e90b757)
+
+-----
+
+## 📄 License
+
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+EOF
